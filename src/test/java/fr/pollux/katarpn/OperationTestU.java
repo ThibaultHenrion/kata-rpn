@@ -9,9 +9,9 @@ public class OperationTestU {
 
     @Test
     public void operationAdditionWorks() {
-        int num1 = 1, num2 = 2;
+        double num1 = 1, num2 = 2;
 
-        int result = Operation.addition(num1, num2);
+        double result = Operation.addition(num1, num2);
 
         assertEquals(3, result, 0);
     }
@@ -24,4 +24,5 @@ public class OperationTestU {
 
         assertEquals(-1, result, 0);
     }
+
 }

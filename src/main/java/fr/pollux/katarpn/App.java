@@ -1,5 +1,7 @@
 package fr.pollux.katarpn;
 
+import java.util.Scanner;
+
 /**
  * Hello world!
  *

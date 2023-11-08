@@ -23,7 +23,7 @@ public class RPNHandlerTestU {
 
         var result = rpnHandler.operations();
 
-        assertEquals(3, result);
+        assertEquals(3, result, 0);
     }
 
     /**
@@ -38,7 +38,7 @@ public class RPNHandlerTestU {
 
         var result = rpnHandler.operations();
 
-        assertEquals(1, result);
+        assertEquals(1, result, 0);
     }
 
     /**
@@ -53,7 +53,7 @@ public class RPNHandlerTestU {
 
         var result = rpnHandler.operations();
 
-        assertEquals(1, result);
+        assertEquals(1, result, 0);
     }
 
     /**
@@ -119,6 +119,36 @@ public class RPNHandlerTestU {
 
         var result = rpnHandler.operations();
 
-        assertEquals(1, result);
+        assertEquals(1, result, 0);
+    }
+
+    /**
+     * Trying an addition with double variables
+     * @throws InvalidFormatException
+     */
+    @Test
+    public void doubleOperationWorks() throws InvalidFormatException {
+        String rpn = "0.5 1 +";
+
+        var rpnHandler = new RPNHandler(rpn);
+
+        var result = rpnHandler.operations();
+
+        assertEquals(1.5, result, 0);
+    }
+
+    /**
+     * Trying an addition with multiple double numbers
+     * @throws InvalidFormatException
+     */
+    @Test
+    public void multipleDoubleOperationWorks() throws InvalidFormatException {
+        String rpn = "0.5 1.5 -";
+
+        var rpnHandler = new RPNHandler(rpn);
+
+        var result = rpnHandler.operations();
+
+        assertEquals(-1, result, 0);
     }
 }
