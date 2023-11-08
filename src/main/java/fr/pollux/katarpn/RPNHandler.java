@@ -28,7 +28,7 @@ public class RPNHandler {
                         stack.add(Operation.substraction(stack.pop(), stack.pop()));
                         break;
                     default:
-                        stack.add(Integer.parseInt(el));
+                        stack.add(Double.parseDouble(el));
                 }
             }
         }

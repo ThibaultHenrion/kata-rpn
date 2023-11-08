@@ -68,7 +68,7 @@ public class RPNHandlerTestU {
 
         var result = rpnHandler.operations();
 
-        assertEquals(-1, result);
+        assertEquals(-1, result, 0);
     }
 
     /**
