@@ -15,4 +15,13 @@ public class OperationTestU {
 
         assertEquals(3, result);
     }
+
+    @Test
+    public void operationSubstractionWorks() {
+        int num1 = 2, num2 = 1;
+
+        int result = Operation.substraction(num1, num2);
+
+        assertEquals(1, result);
+    }
 }
