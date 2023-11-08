@@ -182,5 +182,61 @@ public class RPNHandlerTestU {
         assertEquals(5, result, 0);
     }
 
+    /**
+     * Trying the sqrt
+     * @throws InvalidFormatException
+     */
+    @Test
+    public void squareRootWorks() throws InvalidFormatException {
+        String rpn = "9 sqrt";
 
+        var rpnHandler = new RPNHandler(rpn);
+
+        var result = rpnHandler.operations();
+
+        assertEquals(3, result, 0);
+    }
+
+    /**
+     * Trying to calculate sqrt with no number
+     * @throws InvalidFormatException
+     */
+    @Test(expected = InvalidFormatException.class)
+    public void InvalidSquareRootExpression() throws InvalidFormatException {
+        String rpn = "sqrt";
+
+        var rpnHandler = new RPNHandler(rpn);
+
+        var result = rpnHandler.operations();
+    }
+
+    /**
+     * Checking if the maximum works
+     * @throws InvalidFormatException
+     */
+    @Test
+    public void maximumWorks() throws InvalidFormatException {
+        String rpn = "5 11 14 10 max";
+
+        var rpnHandler = new RPNHandler(rpn);
+
+        var result = rpnHandler.operations();
+
+        assertEquals(14, result, 0);
+    }
+
+    /**
+     * Checking if the minimum works
+     * @throws InvalidFormatException
+     */
+    @Test
+    public void minimumWorks() throws InvalidFormatException {
+        String rpn = "5 11 14 10 min";
+
+        var rpnHandler = new RPNHandler(rpn);
+
+        var result = rpnHandler.operations();
+
+        assertEquals(5, result, 0);
+    }
 }

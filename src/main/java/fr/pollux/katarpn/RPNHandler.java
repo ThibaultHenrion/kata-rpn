@@ -1,7 +1,6 @@
 package fr.pollux.katarpn;
 
 import fr.pollux.katarpn.exception.InvalidFormatException;
-import fr.pollux.katarpn.Operation;
 
 import java.util.*;
 import java.util.Arrays;
@@ -31,6 +30,19 @@ public class RPNHandler {
                         break;
                     case "/":
                         stack.add(Operation.division(stack.pop(), stack.pop()));
+                        break;
+                    case "sqrt":
+                        stack.add(Operation.squareRoot(stack.pop()));
+                        break;
+                    case "max":
+                        double maxNumber = Operation.maximum(stack);
+                        stack.clear();
+                        stack.add(maxNumber);
+                        break;
+                    case "min":
+                        double minNumber = Operation.minimum(stack);
+                        stack.clear();
+                        stack.add(minNumber);
                         break;
                     default:
                         stack.add(Double.parseDouble(el));

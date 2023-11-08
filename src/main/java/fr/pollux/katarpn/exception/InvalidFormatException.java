@@ -1,5 +1,5 @@
 package fr.pollux.katarpn.exception;
 
-public class InvalidFormatException extends Exception{
+public class InvalidFormatException extends RuntimeException{
 
 }
