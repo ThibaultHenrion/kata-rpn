@@ -44,6 +44,9 @@ public class RPNHandler {
                         stack.clear();
                         stack.add(minNumber);
                         break;
+                    case "^":
+                        stack.add(Operation.power(stack.pop(), stack.pop()));
+                        break;
                     default:
                         stack.add(Double.parseDouble(el));
                 }

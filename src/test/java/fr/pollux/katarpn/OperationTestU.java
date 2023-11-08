@@ -109,4 +109,13 @@ public class OperationTestU {
         assertEquals(minValue, val,0);
 
     }
+
+    @Test
+    public void power() {
+        double num1 = 2, num2 = 3;
+
+        double val = Operation.power(num1, num2);
+
+        assertEquals(9, val, 0);
+    }
 }

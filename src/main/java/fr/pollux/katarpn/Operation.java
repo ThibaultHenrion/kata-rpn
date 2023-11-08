@@ -43,4 +43,8 @@ public class Operation
         }
         return stack.stream().min(Double::compareTo).get();
     }
+
+    public static double power(double num1, double num2) {
+        return Math.pow(num2, num1);
+    }
 }

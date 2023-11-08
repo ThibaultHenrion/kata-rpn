@@ -239,4 +239,15 @@ public class RPNHandlerTestU {
 
         assertEquals(5, result, 0);
     }
+
+    @Test
+    public void powerWorks() throws InvalidFormatException {
+        String rpn = "2 3 ^";
+
+        var rpnHandler = new RPNHandler(rpn);
+
+        var result = rpnHandler.operations();
+
+        assertEquals(8, result, 0);
+    }
 }
