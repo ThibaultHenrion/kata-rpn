@@ -151,4 +151,36 @@ public class RPNHandlerTestU {
 
         assertEquals(-1, result, 0);
     }
+
+    /**
+     * Trying the multiplication
+     * @throws InvalidFormatException
+     */
+    @Test
+    public void multiplicationWorks() throws InvalidFormatException {
+        String rpn = "2 3 *";
+
+        var rpnHandler = new RPNHandler(rpn);
+
+        var result = rpnHandler.operations();
+
+        assertEquals(6, result, 0);
+    }
+
+    /**
+     * Trying the division
+     * @throws InvalidFormatException
+     */
+    @Test
+    public void divisionWorks() throws InvalidFormatException {
+        String rpn = "15 3 /";
+
+        var rpnHandler = new RPNHandler(rpn);
+
+        var result = rpnHandler.operations();
+
+        assertEquals(5, result, 0);
+    }
+
+
 }

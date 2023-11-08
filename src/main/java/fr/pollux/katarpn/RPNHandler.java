@@ -26,7 +26,12 @@ public class RPNHandler {
                     case "-":
                         stack.add(Operation.substraction(stack.pop(), stack.pop()));
                         break;
-                    
+                    case "*":
+                        stack.add(Operation.multiplication(stack.pop(), stack.pop()));
+                        break;
+                    case "/":
+                        stack.add(Operation.division(stack.pop(), stack.pop()));
+                        break;
                     default:
                         stack.add(Double.parseDouble(el));
                 }
